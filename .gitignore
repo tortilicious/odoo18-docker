@@ -1,0 +1,50 @@
+# Environment variables (NUNCA subir contraseñas)
+.env
+.env.local
+.env.*.local
+
+# Datos de PostgreSQL (son demasiado grandes y regenerables)
+postgres_data/
+!postgres_data/.gitkeep
+
+# Datos de Odoo (también demasiado grandes)
+odoo_filestore/
+odoo_sessions/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Otros
+.DS_Store
+Thumbs.db
+*.log
