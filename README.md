@@ -1,6 +1,6 @@
 # Odoo + PostgreSQL Docker Setup
 
-Setup de desarrollo local para Odoo 18 con PostgreSQL usando Docker Compose.
+Setup de desarrollo local para Odoo con PostgreSQL usando Docker Compose.
 
 ## Requisitos Previos
 
