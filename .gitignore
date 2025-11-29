@@ -1,44 +1,36 @@
 # ============================================================================
-# EXCEPCIONES PRIMERO - Archivos que SÍ queremos rastrear
-# ============================================================================
-# Estos son los archivos clave que mantienen la estructura del proyecto
-# incluso cuando las carpetas están vacías
-!postgres_data/.gitkeep
-!addons/.gitkeep
-
-# ============================================================================
 # ENVIRONMENT VARIABLES - Credenciales y configuración local
 # ============================================================================
-# NUNCA versionars archivos .env con contraseñas
 .env
 .env.local
 .env.*.local
 
-
 # ============================================================================
 # DATOS DE CONTENEDORES - Información local del sistema
 # ============================================================================
-# PostgreSQL - Datos de la base de datos (muy grandes, regenerables)
+# PostgreSQL - Datos de la base de datos
 postgres_data/*
+!postgres_data/.gitkeep
 
 # Odoo - Almacenamiento de archivos subidos por usuarios
-odoo_filestore/
 odoo_filestore/*
+!odoo_filestore/.gitkeep
 
 # Odoo - Información de sesiones de usuarios
-odoo_sessions/
 odoo_sessions/*
+!odoo_sessions/.gitkeep
+
+# Addons
+addons/*
+!addons/.gitkeep
 
 # ============================================================================
 # PYTHON - Archivos compilados y entornos virtuales
 # ============================================================================
-# Bytecode compilado
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
-# Distribución / empaquetamiento
 .Python
 env/
 venv/
@@ -62,11 +54,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-
 # ============================================================================
 # IDEs Y EDITORES
 # ============================================================================
-# Visual Studio Code
 .vscode/
 .vscode/*
 !.vscode/settings.json
@@ -75,29 +65,24 @@ MANIFEST
 !.vscode/extensions.json
 *.code-workspace
 
-# PyCharm / IntelliJ
 .idea/
 *.iml
 *.iws
 *.ipr
 
-# Vim / Neovim
 .vim/
 *.swp
 *.swo
 *~
 .netrwhist
 
-# Emacs
 *~
 \#*\#
 .\#*
 
-
 # ============================================================================
 # SISTEMAS OPERATIVOS
 # ============================================================================
-# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -105,12 +90,10 @@ MANIFEST
 .Spotlight-V100
 .Trashes
 
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
 
 # ============================================================================
 # LOGS Y ARCHIVOS TEMPORALES
@@ -122,22 +105,15 @@ tmp/
 temp/
 *.pid
 
-
 # ============================================================================
 # OTROS
 # ============================================================================
-# Archivos de configuración específica del IDE que no compartimos
 .project
 .pydevproject
 .classpath
 .c9/
 *.sublime-workspace
 
-# Caché de pytest
 .pytest_cache/
 .coverage
 htmlcov/
-
-# Directorios de compilación de Django/Odoo
-*.egg-info/
-.tox/
